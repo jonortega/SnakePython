@@ -7,9 +7,17 @@ class Game:
 		self.heigth = heigth
 		self.width = width
 
-	def render(self):
-		print("Heigth: " + str(self.heigth))
-		print("Width: " + str(self.width))
+	def board_matrix(self):
+		board = []
+		for row in range(0,self.heigth):
+			for column in range(0,self.width):
+				board.append([None])
+		# Return an empty marix
 
-game = Game(10, 20)
+	def render(self):
+		matrix = self.board_matrix()
+		print(matrix)
+
+
+game = Game(4, 3)
 game.render()
